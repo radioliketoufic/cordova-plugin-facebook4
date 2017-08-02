@@ -512,7 +512,7 @@ public class ConnectPlugin extends CordovaPlugin {
             ShareLinkContent content = buildContent(params);
             // Set up the activity result callback to this class
             cordova.setActivityResultCallback(this);
-            shareDialog.show(content);
+            shareDialog.show(content, ShareDialog.Mode.FEED);
 
         } else if (method.equalsIgnoreCase("share_open_graph")) {
             if (!ShareDialog.canShow(ShareOpenGraphContent.class)) {
